@@ -5,8 +5,7 @@ export default function Home() {
   return (
     <div>
       <h3>ELIJE TU PROXIMA AVENTURA</h3>
-     
-        <OneCard/>
+      
       <Cards/>
     </div>
   )

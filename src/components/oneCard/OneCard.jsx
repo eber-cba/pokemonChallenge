@@ -9,15 +9,15 @@ import Swal from "sweetalert2";
 import { gsap } from "gsap";
 import "./oneCard.css";
 import { ButtonGroup } from "@mui/material";
-export default function OneCard() {
+export default function OneCard({ nombre }) {
   const [poke, setPoke] = useState([]);
   const [isHidden, setIsHidden] = useState(true);
   const [isHiddenPoke, setIsHiddenPoke] = useState(false);
 
   const [open, setOpen] = useState(false);
 
-  const [searchPokemon, setSearchPokemon] = useState("");
-
+  const [searchPokemon, setSearchPokemon] = useState();
+  console.log("NOMBRE ONECARD", nombre);
   const handleSubmit = (e) => {
     e.preventDefault();
     if (searchPokemon === "") {
@@ -47,9 +47,18 @@ export default function OneCard() {
         });
     }
   };
+
+  useEffect(() => {
+    axios.get(`https://pokeapi.co/api/v2/pokemon/${nombre}`).then((res) => {
+      setPoke(res.data);
+      setOpen(true);
+    });
+  }, [nombre]);
+
   const Timeline = gsap.timeline({
     defaults: { ease: "elastic.out(1, 0.3)" },
   });
+
   useEffect(() => {
     const pokebola = document.querySelectorAll(".pokebola");
 
@@ -183,7 +192,11 @@ export default function OneCard() {
                         {poke.length === 0
                           ? null
                           : poke.abilities.map((habilidad) => {
-                              return <Button className="buttonsHabilidad">{habilidad.ability.name}</Button>;
+                              return (
+                                <Button className="buttonsHabilidad">
+                                  {habilidad.ability.name}
+                                </Button>
+                              );
                             })}
                       </ButtonGroup>
                     </label>

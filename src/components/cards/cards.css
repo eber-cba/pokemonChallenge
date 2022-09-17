@@ -20,11 +20,7 @@
   height: 20rem;
   object-fit: cover;
 }
-.divCarrito {
-  display: flex;
-  justify-content: start;
-   cursor: pointer;
-}
+ 
 .divPagination {
   display: flex;
   justify-content: center;
@@ -80,30 +76,4 @@
 .labelFunko{
   color: rgb(138, 19, 138);
   font-weight: bold;
-}
-@media (max-width: 700px) {
-  .CardGrid {
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(auto-fit);
-    width: 100%;
-    padding: 30% 0 0 2px;
-    margin: 0;
-  }
-
-  .card-content {
-    left: 3rem;
-    position: relative;
-    width: 50%;
-    margin-left: 35%;
-  }
-  .CardImage {
-    max-width: 44%;
-    max-height: 60%;
-   
-     position: absolute;
-  }
-  .scroll{
-    margin: 40% 0 0 35%;
-
-  }
 }
