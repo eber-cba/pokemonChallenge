@@ -1,8 +1,109 @@
-.Cards{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px;
-    padding: 3%;
-    align-items: baseline;
+.CardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  padding: 3%;
+}
+.cardActionArea {
+  display: block;
+  width: 100%;
+}
 
-} 
+.padreGrid {
+  height: 10vh;
+  width: 100%;
+  
+}
+ 
+.CardImage {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+.divCarrito {
+  display: flex;
+  justify-content: start;
+   cursor: pointer;
+}
+.divPagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  padding-bottom: 10px;
+  
+ 
+}
+.circularProgress{
+  display: flex;
+  justify-content: center;
+ align-items: center;
+ margin-left: 35rem;
+ margin-top: 8rem;
+}
+.scroll {
+  position: fixed;
+  z-index: 3;
+  margin: 0 0 0 85%;
+  cursor: pointer;
+}
+.botonFlecha {
+  border-radius: 20px;
+  height: 30px;
+  width: 30px;
+  border: 1px solid #000000;
+}
+
+.imgFlecha {
+  height: 12px;
+}
+.botones-numeros {
+  background-color: white;
+  height: 24px;
+  width: 25px;
+  border-radius: 5px;
+  border: 0px solid #fff;
+  color: rgb(107, 106, 106);
+   
+}
+.botones-numeros:hover{
+  border: 1px solid #ff6309;
+}
+.botones-numeros:focus{
+   color: #000000;
+   font-weight: bolder;
+  border: 2px solid #ff6309;
+  border-radius: 6px;
+  height: 26px;
+
+}
+.labelFunko{
+  color: rgb(138, 19, 138);
+  font-weight: bold;
+}
+@media (max-width: 700px) {
+  .CardGrid {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(auto-fit);
+    width: 100%;
+    padding: 30% 0 0 2px;
+    margin: 0;
+  }
+
+  .card-content {
+    left: 3rem;
+    position: relative;
+    width: 50%;
+    margin-left: 35%;
+  }
+  .CardImage {
+    max-width: 44%;
+    max-height: 60%;
+   
+     position: absolute;
+  }
+  .scroll{
+    margin: 40% 0 0 35%;
+
+  }
+}

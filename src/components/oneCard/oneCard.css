@@ -1,0 +1,114 @@
+.backdrop {
+  background: rgba(0, 0, 0, 0.9) !important;
+}
+
+.imgOneCard {
+  width: 50% !important;
+}
+
+.greenCard {
+  background: linear-gradient(to right, #11998e, #38ef7d) !important;
+}
+.yelowCard {
+  background: radial-gradient(
+    circle,
+    rgba(254, 255, 37, 1) 28%,
+    rgba(247, 195, 122, 1) 100%
+  ) !important;
+}
+.blueCard {
+  background: linear-gradient(to right, #43cea2, #185a9d) !important;
+}
+.redCard {
+  background: linear-gradient(to right, #ffcc33, #ffb347) !important;
+}
+.normalCard{
+  background: linear-gradient(to right, #2c3e50, #4ca1af)!important ;
+}
+.datos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 18px;
+  gap: 10px;
+}
+.tipo {
+  margin-top: -25%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.swal2-html-container {
+  font-size: 30px;
+}
+
+.nombre {
+  font-size: 35px;
+}
+.habilidades {
+  display: flex;
+  text-align: center;
+}
+.buttonsHabilidad{
+  color: white !important;
+  border-color: black !important;
+}
+.buttonsHabilidad:hover{
+  background-color: rgba(0, 0, 0, 0.322) !important;
+}
+ 
+/* cards */
+.container {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  border-left: rgba(255, 255, 255, 0.342) 1px solid;
+  border-top: rgba(255, 255, 255, 0.342) 1px solid;
+  border-radius: 20px;
+  backdrop-filter: blur(30px);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
+  color: white;
+  backface-visibility: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  transition: 2.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.front {
+  transform: rotateY(0deg);
+  padding: 6px;
+}
+.back {
+  background: rgba(255, 255, 255, 0.109);
+  transform: rotateY(180deg);
+  padding: 10px;
+}
+.container:hover > .front {
+  transform: rotateY(-180deg);
+}
+.container:hover > .back {
+  transform: rotateY(0deg);
+}
+.btn {
+  border: 1px solid white;
+  background: rgba(255, 255, 255, 0.21);
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.5s;
+}
+.btn:hover {
+  padding: 10px 40px;
+  background: white;
+  color: black;
+}
