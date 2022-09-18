@@ -11,7 +11,7 @@ import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import "./navbar.css"
+import "./navbar.css";
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navbar = () => {
@@ -41,7 +41,6 @@ const Navbar = () => {
             variant="h6"
             noWrap
             component="a"
-            
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -52,7 +51,10 @@ const Navbar = () => {
               textDecoration: "none",
             }}
           >
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" />
+            <img
+              alt="navbar"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png"
+            />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -116,17 +118,23 @@ const Navbar = () => {
               textDecoration: "none",
             }}
           >
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" />
+            <img alt="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" />
           </Typography>
           <div className="links">
             <a
-                
+              rel="noreferrer"
               target="_blank"
               href="https://github.com/eber-cba/pokemonChallenge"
             >
               Repositorio
             </a>
-            <a  target="_blank" href="https://www.linkedin.com/in/eber-coronel-13536218b/" >Linkedin</a>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href="https://www.linkedin.com/in/eber-coronel-13536218b/"
+            >
+              Linkedin
+            </a>
           </div>
 
           <Box sx={{ flexGrow: 0 }}>
