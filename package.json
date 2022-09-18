@@ -1,5 +1,5 @@
 {
-  "homepage":"https://eber-cba.github.io/pokemonChallenge",
+  
 
   "name": "pokemon",
   "version": "0.1.0",
@@ -23,8 +23,7 @@
     "node": "16.17.0"
   },
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
