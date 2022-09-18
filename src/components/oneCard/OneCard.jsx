@@ -9,6 +9,7 @@ import Swal from "sweetalert2";
 import { gsap } from "gsap";
 import "./oneCard.css";
 import { ButtonGroup } from "@mui/material";
+
 export default function OneCard({ nombre }) {
   const [poke, setPoke] = useState([]);
   const [isHidden, setIsHidden] = useState(true);
@@ -112,6 +113,74 @@ export default function OneCard({ nombre }) {
         card.classList.remove("yelowCard");
         card.classList.remove("blueCard");
         card.classList.remove("normalCard");
+      } else if (poke.types[0].type.name === "poison") {
+        card.classList.add("poisonCard");
+        card.classList.remove("greenCard");
+        card.classList.remove("yelowCard");
+        card.classList.remove("blueCard");
+        card.classList.remove("normalCard");
+        card.classList.remove("redCard");
+      } else if (poke.types[0].type.name === "fighting") {
+        card.classList.add("fightingCard");
+        card.classList.remove("poisonCard");
+        card.classList.remove("greenCard");
+        card.classList.remove("yelowCard");
+        card.classList.remove("blueCard");
+        card.classList.remove("normalCard");
+        card.classList.remove("redCard");
+      } else if (poke.types[0].type.name === "psychic") {
+        card.classList.add("psychicCard");
+        card.classList.remove("fighting");
+        card.classList.remove("poisonCard");
+        card.classList.remove("greenCard");
+        card.classList.remove("yelowCard");
+        card.classList.remove("blueCard");
+        card.classList.remove("normalCard");
+        card.classList.remove("redCard");
+      } else if (poke.types[0].type.name === "fairy") {
+        card.classList.add("fairyCard");
+        card.classList.remove("psychicCard");
+        card.classList.remove("fightingCard");
+        card.classList.remove("poisonCard");
+        card.classList.remove("greenCard");
+        card.classList.remove("yelowCard");
+        card.classList.remove("blueCard");
+        card.classList.remove("normalCard");
+        card.classList.remove("redCard");
+      } else if (poke.types[0].type.name === "rock") {
+        card.classList.add("rockCard");
+        card.classList.remove("fairyCard");
+        card.classList.remove("psychicCard");
+        card.classList.remove("fightingCard");
+        card.classList.remove("poisonCard");
+        card.classList.remove("greenCard");
+        card.classList.remove("yelowCard");
+        card.classList.remove("blueCard");
+        card.classList.remove("normalCard");
+        card.classList.remove("redCard");
+      } else if (poke.types[0].type.name === "gosth") {
+        card.classList.add("gosthCard");
+        card.classList.remove("fairyCard");
+        card.classList.remove("psychicCard");
+        card.classList.remove("fightingCard");
+        card.classList.remove("poisonCard");
+        card.classList.remove("greenCard");
+        card.classList.remove("yelowCard");
+        card.classList.remove("blueCard");
+        card.classList.remove("normalCard");
+        card.classList.remove("redCard");
+      } else if (poke.types[0].type.name === "ground") {
+        card.classList.add("groundCard");
+        card.classList.remove("gosth");
+        card.classList.remove("fairyCard");
+        card.classList.remove("psychicCard");
+        card.classList.remove("fightingCard");
+        card.classList.remove("poisonCard");
+        card.classList.remove("greenCard");
+        card.classList.remove("yelowCard");
+        card.classList.remove("blueCard");
+        card.classList.remove("normalCard");
+        card.classList.remove("redCard");
       } else {
         card.classList.add("normalCard");
         card.classList.remove("greenCard");
@@ -122,13 +191,16 @@ export default function OneCard({ nombre }) {
     }
   };
   return (
-    <div>
+    <div className="buscador">
       <form onSubmit={handleSubmit}>
-        <Button type="submit">Buscar</Button>
+        <Button className="botonConsultar" type="submit">
+          Consultar
+        </Button>
         <input
+          style={{ textTransform: "lowercase" }}
           value={searchPokemon}
           placeholder="Buscar pokemón"
-          onChange={(e) => setSearchPokemon(e.target.value)}
+          onChange={(e) => setSearchPokemon(e.target.value.toLowerCase())}
         />
       </form>
       <div>
@@ -172,7 +244,7 @@ export default function OneCard({ nombre }) {
                       })}
                 </div>
               </div>
-              <div class="card back">
+              <div className="card back">
                 <div className="datos">
                   <div>
                     <p>Altura: {poke.height}</p>
@@ -202,7 +274,7 @@ export default function OneCard({ nombre }) {
                     </label>
                   </div>
                 </div>
-                <button onClick={handleClose} class="btn">
+                <button onClick={handleClose} className="btn">
                   Salir
                 </button>
               </div>

@@ -40,3 +40,31 @@
 }
  
  
+.buscador{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+  margin-top: 16px; 
+ 
+}
+ input{
+  padding: 4px;
+  font-size: 17px;
+  border-width: 3px;
+  border-color: #b8d3ff;
+  background-color: #FFFFFF;
+  color: #000000;
+  border-style: solid;
+  border-radius: 20px;
+ 
+}
+input:focus {
+  outline: none !important;
+  border:1px solid red;
+  box-shadow: 0 0 10px #719ECE;
+}
+
+.botonConsultar{
+  color: white !important;
+}

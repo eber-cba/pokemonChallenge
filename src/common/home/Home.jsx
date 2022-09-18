@@ -1,12 +1,12 @@
-import React from 'react'
-import Cards from '../../components/cards/Cards'
-import OneCard from '../../components/oneCard/OneCard'
+import React from "react";
+import Cards from "../../components/cards/Cards";
+import Navbar from "../navbar/Navbar";
 export default function Home() {
   return (
     <div>
-      <h3>ELIJE TU PROXIMA AVENTURA</h3>
-      
-      <Cards/>
+      <Navbar />
+
+      <Cards />
     </div>
-  )
+  );
 }

@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-
+import img from "../../assets/769px-Pokebola-pokeball-png-0.png"
 import Button from "@mui/material/Button";
 import CardMedia from "@mui/material/CardMedia";
 import Chip from "@mui/material/Chip";
@@ -13,11 +12,11 @@ import "./cards.css";
 export default function Cards() {
   const [post, setPost] = useState([]);
   const [number, setNumber] = useState(1); // No of pages
-  const [postPerPage] = useState(9); 
+  const [postPerPage] = useState(9);
   const lastPost = number * postPerPage;
   const firstPost = lastPost - postPerPage;
   const currentPost = post.slice(firstPost, lastPost);
-  const [nombre, setNombre]=useState();
+  const [nombre, setNombre] = useState();
   const pageNumber = [];
   useEffect(() => {
     const loadData = async () => {
@@ -51,7 +50,7 @@ export default function Cards() {
 
   return (
     <div>
-      <OneCard nombre={nombre}/>
+      <OneCard nombre={nombre} />
       <div className="padreGrid">
         <div className="CardGrid">
           {currentPost.map((data, i) => {
@@ -84,10 +83,12 @@ export default function Cards() {
                           ? "radial-gradient( circle farthest-corner at 10% 20%,  rgba(62,133,238,1) 1.1%, rgba(227,137,240,1) 43.7%, rgba(243,193,124,1) 89.7% )"
                           : data.types[0].type.name === "rock"
                           ? "radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,130,159,1) 0%, rgba(103,56,96,1) 90% )"
-                          : data.types[0].type.name === "ghost"?"linear-gradient( 109.6deg,  rgba(15,2,2,1) 11.2%, rgba(36,163,190,1) 91.1% )":"black"
+                          : data.types[0].type.name === "ghost"
+                          ? "linear-gradient( 109.6deg,  rgba(15,2,2,1) 11.2%, rgba(36,163,190,1) 91.1% )"
+                          : "black"
                       }`,
                     }}
-                    class="card front"
+                    className="card front"
                   >
                     <div className="nombre">
                       <p>{data.name}</p>
@@ -114,7 +115,7 @@ export default function Cards() {
                     style={{
                       background: `linear-gradient( 76.9deg,  rgba(255,90,90,1) 27.2%, rgba(130,5,255,1) 79.9% )`,
                     }}
-                    class="card back"
+                    className="card back"
                   >
                     <div className="datos">
                       <div>
@@ -145,9 +146,10 @@ export default function Cards() {
                         </label>
                       </div>
                     </div>
-                    
-                      <button onClick={(()=>setNombre(data.name))} class="btn">Ver</button>
-                    
+
+                    <button onClick={() => setNombre(data.name)} className="btn">
+                      Ver
+                    </button>
                   </div>
                 </div>
               </div>
@@ -156,13 +158,12 @@ export default function Cards() {
         </div>
 
         <div className="divPagination">
-          <button className="botonFlecha" onClick={flechaHaciaLaIzquerda}>
-            <img
-              className="imgFlecha"
-              src="/flechaizquierda.svg"
-              alt="flecha-izquierda"
-            />
-          </button>
+          <img
+            onClick={flechaHaciaLaIzquerda}
+            className="imgFlecha"
+            src={img}
+            alt="flecha-izquierda"
+          />
 
           {pageNumber.map((Elem, i) => {
             return (
@@ -176,13 +177,13 @@ export default function Cards() {
               </div>
             );
           })}
-          <button className="botonFlecha" onClick={() => setNumber(number + 1)}>
-            <img
-              className="imgFlecha"
-              src="/flechaderecha.svg"
-              alt="flecha-derecha"
-            />
-          </button>
+
+          <img
+            onClick={() => setNumber(number + 1)}
+            className="imgFlecha"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
+            alt="flecha-derecha"
+          />
         </div>
       </div>
     </div>

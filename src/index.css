@@ -4,7 +4,11 @@
   box-sizing: border-box;
   font-family: "Pokemon Solid", sans-serif !important;
 }
-
+body {
+  background-image: url("http://cdn.animalhi.com/1600x1200/20121026/pokemon%20poke%20balls%201600x1200%20wallpaper_www.animalhi.com_83.jpg");
+  height: 100vh !important;
+  background-size: cover !important; /* <------ */
+ }
 /* animaciones => OneCard */
 
 .poke_box {
@@ -26,6 +30,8 @@
   box-shadow: inset -10px 10px 0 10px #ccc;
   animation: shake 1.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
   animation-play-state: paused;
+  cursor: pointer;
+
 }
 
 .pokeball:hover {
@@ -129,7 +135,7 @@
   padding: 6px;
 }
 .back {
-  background: rgba(255, 255, 255, 0.109);
+  background: linear-gradient( 76.9deg,  rgba(255,90,90,1) 27.2%, rgba(130,5,255,1) 79.9% );
   transform: rotateY(180deg);
   padding: 10px;
 }
@@ -165,11 +171,97 @@
   ) !important;
 }
 .blueCard {
-  background: linear-gradient(to right, #43cea2, #185a9d) !important;
+  background: linear-gradient(
+    179.4deg,
+    rgba(33, 150, 243, 1) 1.8%,
+    rgba(22, 255, 245, 0.6) 97.1%
+  );
 }
 .redCard {
   background: linear-gradient(to right, #ffcc33, #ffb347) !important;
 }
 .normalCard {
   background: linear-gradient(to right, #2c3e50, #4ca1af) !important ;
+}
+.poisonCard {
+  background: linear-gradient(
+    126.3deg,
+    rgba(30, 2, 83, 1) 32.2%,
+    rgba(198, 55, 160, 0.46) 109.2%
+  );
+}
+.fightingCard {
+  background: linear-gradient(
+    65.9deg,
+    rgba(85, 228, 224, 1) 5.5%,
+    rgba(75, 68, 224, 0.74) 54.2%,
+    rgba(64, 198, 238, 1) 55.2%,
+    rgba(177, 36, 224, 1) 98.4%
+  );
+}
+.psychicCard {
+  background: linear-gradient(
+    97.3deg,
+    rgba(25, 50, 70, 0.81) 10.7%,
+    rgba(155, 65, 25, 0.72) 39.5%,
+    rgba(255, 192, 0, 0.81) 69.7%
+  );
+}
+.fairyCard {
+  background: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(62, 133, 238, 1) 1.1%,
+    rgba(227, 137, 240, 1) 43.7%,
+    rgba(243, 193, 124, 1) 89.7%
+  );
+}
+.rockCard {
+  background: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(100, 130, 159, 1) 0%,
+    rgba(103, 56, 96, 1) 90%
+  );
+}
+.ghostCard {
+  background: linear-gradient(
+    109.6deg,
+    rgba(15, 2, 2, 1) 11.2%,
+    rgba(36, 163, 190, 1) 91.1%
+  );
+}
+.groundCard {
+  background: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(147, 67, 67, 1) 0%,
+    rgba(111, 27, 27, 1) 90%
+  );
+}
+img {
+  width: 30%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #2256ff; /*//Color de fondo*/
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #ff3d3d;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #ffc93c;
+  width: 10px;
+  height: 10px;
+  border: 6px;
+}
+::-webkit-scrollbar-track-piece:start {
+  width: 10px;
+  height: 10px;
+  border: 2px;
+  background: #2256ff;
 }

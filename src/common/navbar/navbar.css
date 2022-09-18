@@ -1,0 +1,12 @@
+.links{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.links >  a{
+    color: white !important;
+    text-decoration: none;
+}
+.links >  a:hover{
+    background-color: rgba(43, 43, 255, 0.712);
+}
