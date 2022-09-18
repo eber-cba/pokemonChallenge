@@ -18,7 +18,7 @@ export default function OneCard({ nombre }) {
   const [open, setOpen] = useState(false);
 
   const [searchPokemon, setSearchPokemon] = useState();
-  console.log("NOMBRE ONECARD", nombre);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (searchPokemon === "") {
@@ -70,7 +70,7 @@ export default function OneCard({ nombre }) {
     });
   }, [poke]);
 
-  console.log("poke", poke);
+ 
 
   const mostrarCard = () => {
     setIsHidden(false);
