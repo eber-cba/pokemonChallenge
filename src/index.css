@@ -2,14 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Pokemon Solid", sans-serif !important;
 }
 body {
   background-image: url("http://cdn.animalhi.com/1600x1200/20121026/pokemon%20poke%20balls%201600x1200%20wallpaper_www.animalhi.com_83.jpg");
   height: 100vh !important;
-  background-size: cover !important; /* <------ */
- }
+  background-size: cover !important;
+  font-family: 'Press Start 2P', cursive !important;
+  
+}
 /* animaciones => OneCard */
+ 
 
 .poke_box {
   position: absolute;
@@ -31,7 +33,6 @@ body {
   animation: shake 1.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
   animation-play-state: paused;
   cursor: pointer;
-
 }
 
 .pokeball:hover {
@@ -135,7 +136,11 @@ body {
   padding: 6px;
 }
 .back {
-  background: linear-gradient( 76.9deg,  rgba(255,90,90,1) 27.2%, rgba(130,5,255,1) 79.9% );
+  background: linear-gradient(
+    76.9deg,
+    rgba(255, 90, 90, 1) 27.2%,
+    rgba(130, 5, 255, 1) 79.9%
+  );
   transform: rotateY(180deg);
   padding: 10px;
 }

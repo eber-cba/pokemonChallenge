@@ -22,7 +22,7 @@ export default function OneCard({ nombre }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (searchPokemon === "") {
-      alert("esta vacio tu coso");
+      alert("NOOOO!!!! QUE TOCASTE? no podes buscar algo vacio...");
     } else {
       axios
         .get(`https://pokeapi.co/api/v2/pokemon/${searchPokemon}`)

@@ -107,7 +107,7 @@ export default function Cards() {
                       {data.length === 0
                         ? null
                         : data.types.map((tipo) => {
-                            return <Chip label={tipo.type.name} />;
+                            return <Chip className="chip" label={tipo.type.name} />;
                           })}
                     </div>
                   </div>

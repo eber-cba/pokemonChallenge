@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  font-size: 18px;
+  font-size: 13px;
   gap: 10px;
 }
 .tipo {
@@ -21,11 +21,11 @@
   width: 100%;
 }
 .swal2-html-container {
-  font-size: 30px;
+  font-size: 10px;
 }
 
 .nombre {
-  font-size: 35px;
+  font-size: 20px;
 }
 .habilidades {
   display: flex;
@@ -34,6 +34,9 @@
 .buttonsHabilidad{
   color: white !important;
   border-color: black !important;
+  font-family: 'Press Start 2P', cursive !important;
+  font-size: 10px !important;
+
 }
 .buttonsHabilidad:hover{
   background-color: rgba(0, 0, 0, 0.322) !important;
@@ -57,7 +60,8 @@
   color: #000000;
   border-style: solid;
   border-radius: 20px;
- 
+  font-family: 'Press Start 2P', cursive !important;
+  font-size: 13px;
 }
 input:focus {
   outline: none !important;
@@ -67,4 +71,5 @@ input:focus {
 
 .botonConsultar{
   color: white !important;
+  font-family: 'Press Start 2P', cursive !important;
 }
