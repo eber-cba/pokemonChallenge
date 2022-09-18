@@ -13,6 +13,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import "./navbar.css";
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
+  
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -122,14 +123,14 @@ const Navbar = () => {
           </Typography>
           <div className="links">
             <a
-              rel="noreferrer"
+           rel="noopener noreferrer"
               target="_blank"
               href="https://github.com/eber-cba/pokemonChallenge"
             >
-              Repositorio
+               Repositorio
             </a>
             <a
-              rel="noreferrer"
+             rel="noopener noreferrer"
               target="_blank"
               href="https://www.linkedin.com/in/eber-coronel-13536218b/"
             >
